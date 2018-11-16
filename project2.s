@@ -17,7 +17,11 @@
     LeftSpaces:
     #deletes the left spaces if any in user input 
     li $t8, 32 #ascii code for space
-    lb $t9, 0($a0)
+    lb $t9, 0($a0) #stores 0 into $t9
+    beq $t8, $t9, CharacterSpaces
+    move $t9, $a0 
+    j length
+    
     
     
     
