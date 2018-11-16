@@ -35,7 +35,8 @@
     FindLength:
     lb $t2, 0($a0)
     beqz $t2, CheckLength  #if t2 equal to 0 go to CheckLength function
-    
+    beq $t2, $t1, CheckLength #if t1 and t1 are equal go to CheckLength function
+    addi $a0, $a0, 1
     
     
     
