@@ -4,16 +4,23 @@
     msginvalid: .asciiz "Invalid base-28 number."
     msglong: .asciiz "Input is too long."
 .text 
-  
-
-
-
     main: 
     #tells program to expect userinput
     li $v0, 8 
     la $a0, str
     li $a1, 1000
     syscall 
+    
+    RightSpaces:
+    
+    
+    LeftSpaces:
+    #deletes the left spaces if any in user input 
+    li $t8, 32 #ascii code for space
+    lb $t9, 0($a0)
+    
+    
+    
     #tell the system the end of main 
     li $v0, 10
     syscall 
