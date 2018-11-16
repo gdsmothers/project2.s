@@ -38,7 +38,9 @@
     beq $t2, $t1, CheckLength #if t1 and t1 are equal go to CheckLength function
     addi $a0, $a0, 1
     addi $t0, $t0, 1
-    j CheckLength
+    j FindLength 
+    
+    
 
     
     
