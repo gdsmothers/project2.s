@@ -20,13 +20,17 @@
     lb $t9, 0($a0) #stores 0 into $t9
     beq $t8, $t9, CharacterSpaces
     move $t9, $a0 
-    j length
+    j Length
     
     CharacterSpaces:
     #deletes spaces if there are any
     addi $a0, $a0, 1
     j LeftSpaces
     
+    Length:
+    addi $t0, $t0, 0 
+    addi $t1, $t1, 10
+    add $t4, $t4, $a0 #add can add registers and with addi you have to have a  immediate number
     
     
     #tell the system the end of main 
