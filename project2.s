@@ -20,6 +20,8 @@
     
     EmptyInput:
     #checks to see if the input is empty
-    la $a0, msgempty
-    li $v0, 4
+    la $a0, msgempty #loading empty message 
+    li $v0, 4 #prints string
+    syscall 
+    j exit 
 
