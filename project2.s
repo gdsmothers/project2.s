@@ -45,12 +45,10 @@
     #Checks if the string is empty or too long
     beqz $t0, EmptyInput 
     slti $t3, $t0, 5 #if string is of appropriate length
-
-    
-
-    
-    
-    
+    beqz $t3, LongInput
+    move $a0, $t4
+    j ConvertString
+ 
     #tell the system the end of main 
     li $v0, 10
     syscall 
