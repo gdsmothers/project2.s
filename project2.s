@@ -22,6 +22,10 @@
     move $t9, $a0 
     j length
     
+    CharacterSpaces:
+    #deletes spaces if there are any
+    addi $a0, $a0, 1
+    j LeftSpaces
     
     
     
