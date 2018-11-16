@@ -33,6 +33,7 @@
     add $t4, $t4, $a0 #add can add registers and with addi you have to have a  immediate number
     
     FindLength:
+    #Finds the length of the string
     lb $t2, 0($a0)
     beqz $t2, CheckLength  #if t2 equal to 0 go to CheckLength function
     beq $t2, $t1, CheckLength #if t1 and t1 are equal go to CheckLength function
@@ -40,6 +41,11 @@
     addi $t0, $t0, 1
     j FindLength 
     
+    CheckLength:
+    #Checks if the string is empty or too long
+    beqz $t0, EmptyInput 
+    slti $t3, $t0, 5 #if string is of appropriate length
+
     
 
     
