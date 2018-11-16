@@ -20,7 +20,7 @@
     
     EmptyInput:
     #checks to see if the input is empty
-    la $a0, msgempty #loading empty message 
+    la $a0, msgempty #loading message 
     li $v0, 4 #prints string
     syscall 
     j exit 
@@ -33,8 +33,10 @@
     j exit 
     
     LongInput:
+    #checks to see if the input is longer than 4 characters
     la $a0, msglong
     li $v0, 4
-    
+    syscall 
+    j exit 
     
 
