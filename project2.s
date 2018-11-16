@@ -28,5 +28,6 @@
     InvalidInput:
     la $a0, msginvalid
     li $v0, 4
-    
+    syscall 
+    j exit
 
