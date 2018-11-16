@@ -26,8 +26,15 @@
     j exit 
     
     InvalidInput:
+    #checks to see if the input is invlalid 
     la $a0, msginvalid
     li $v0, 4
     syscall 
-    j exit
+    j exit 
+    
+    LongInput:
+    la $a0, msglong
+    li $v0, 4
+    
+    
 
