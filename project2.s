@@ -24,4 +24,9 @@
     li $v0, 4 #prints string
     syscall 
     j exit 
+    
+    InvalidInput:
+    la $a0, msginvalid
+    li $v0, 4
+    
 
