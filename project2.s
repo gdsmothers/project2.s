@@ -50,6 +50,7 @@
     j ConvertString 
     
     ConvertString:
+    #makes sure that character is in range
     lb $t5, 0($a0)  
     beqz $t5, Conversion 
     beq $t5, $t1, Conversion
@@ -66,6 +67,11 @@
     slti $t6, $t5, 115 # if character less than s then valid  
     bne $t6, $zero, FindingChar
     bgt $t5, 114, InvalidInput # if character greater than r then invalid  
+    
+    FindingChar:
+    #checks character individually for string
+    addi $a0, $a0, 1
+    j ConvertString
 
     
     exit:
