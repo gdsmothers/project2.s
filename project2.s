@@ -62,6 +62,8 @@
     slti $t6, $t5, 82  # if character less than R than valid 
     bne $t6, $zero, step_char_forward
     slti $t6, $t5, 97  # if character less than a than invalid 
+    bne $t6, $zero, err_invalid_input
+    slti $t6, $t5, 115 # if character less than s than valid  
 
     
     exit:
