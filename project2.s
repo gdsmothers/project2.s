@@ -112,7 +112,9 @@
     
     Char1:
     li $s6, 21952
-    mult $s4, $s6
+    mult $s4, $s6 
+    mflo $s7 
+    add $t7, $t7, $s7
 
     exit:
     #tell the system the end of main 
