@@ -100,7 +100,8 @@
     Base28UP:
     addi $s4, $s4, -54 #need 28 so subtract 82-54 to get 28 and does upper conversion
     j Arrange 
-    
+    Base28LO:
+    addi $s4, $s4, -87
     
     
     exit:
