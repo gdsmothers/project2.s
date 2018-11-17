@@ -111,11 +111,16 @@
     beq $s0, $s5, Char4
     
     Char1:
+    #converts to base 28 
     li $s6, 21952
     mult $s4, $s6 
     mflo $s7 
     add $t7, $t7, $s7
-
+    addi $s0, $s0, -1
+    addi $a0, $a0, 1
+    j ConvertBase
+    
+    
     exit:
     #tell the system the end of main 
     li $v0, 10
