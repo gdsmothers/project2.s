@@ -29,7 +29,7 @@
     
     Length:
     addi $t0, $t0, 0 
-    addi $t1, $t1, 10
+    addi $t1, $t1, 10     
     add $t4, $t4, $a0 #add can add registers and with addi you have to have a  immediate number
     
     FindLength:
