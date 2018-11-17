@@ -79,7 +79,10 @@
     add $s0, $s0, $t0
     addi $s0, $s0, -1	
     li $s3, 3
-
+    li $s2, 2
+    li $s1, 1
+    li $s5, 0
+    
     exit:
     #tell the system the end of main 
     li $v0, 10
