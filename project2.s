@@ -75,13 +75,13 @@
 
     Conversion:
     move $a0, $t4 
-    addi $t7, $t7, 0
+    addi $t7, $t7, 0 #intializes t7
     add $s0, $s0, $t0
-    addi $s0, $s0, -1	
-    li $s3, 3
-    li $s2, 2
-    li $s1, 1
-    li $s5, 0
+    addi $s0, $s0, -1 #sets s0 to s0 plus 16-bit immediate for overflow
+    li $s3, 3 #will be stored at first character
+    li $s2, 2 #will be stored at 2nd character
+    li $s1, 1 #will be stored at 3rd character
+    li $s5, 0 #will be stored at 4th character
     
     exit:
     #tell the system the end of main 
