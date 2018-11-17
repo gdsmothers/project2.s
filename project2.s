@@ -56,7 +56,8 @@
     slti $t6, $t5, 48  #if the character is less than 0 than invalid 
     bne $t6, $zero, err_invalid_input
     slti $t6, $t5, 58  # if character is less than 9 than valid 
-    
+    bne $t6, $zero, step_char_forward
+    slti $t6, $t5, 65  # if character less than A than invalid 
     exit:
     #tell the system the end of main 
     li $v0, 10
