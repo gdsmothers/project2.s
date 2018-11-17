@@ -54,7 +54,8 @@
     beqz $t5, Conversion 
     beq $t5, $t1, Conversion
     slti $t6, $t5, 48  #if the character is less than 0 than invalid 
-
+    bne $t6, $zero, err_invalid_input
+    slti $t6, $t5, 58  # if character is less than 9 than valid 
     
     exit:
     #tell the system the end of main 
