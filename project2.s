@@ -89,10 +89,14 @@
     beq $s4, $t1, BaseResult #if equal go to BaseResult function
     slti $t6, $s4, 58 
     bne $t6, $zero, Base10 #if not equal go to Base10 function
-    slti $t6, $s4, 82
-    bne $t6, $zero, Base28UP
+    slti $t6, $s4, 82  
+    bne $t6, $zero, Base28UP #based on ascii number
     slti $t6, $s4, 115
-    bne $t6, $zero, Base28LO 
+    bne $t6, $zero, Base28LO #based on ascii number
+    
+    Base10:
+    addi $s4, $s4, -48 #need 10 for base converter so 58-48 =10 and stored into s4
+    j Arrange
     
     exit:
     #tell the system the end of main 
