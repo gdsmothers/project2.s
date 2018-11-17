@@ -104,9 +104,11 @@
     addi $s4, $s4, -87
     
     Arrange:
+    #Have to arrange characters so they can be converted in the right place by the right number
     beq $s0, $s3, Char1
     beq $s0, $s2, Char2
-    
+    beq $s0, $s1, Char3
+    beq $s0, $s5, Char4
     exit:
     #tell the system the end of main 
     li $v0, 10
