@@ -109,6 +109,11 @@
     beq $s0, $s2, Char2
     beq $s0, $s1, Char3
     beq $s0, $s5, Char4
+    
+    Char1:
+    li $s6, 21952
+    mult $s4, $s6
+
     exit:
     #tell the system the end of main 
     li $v0, 10
