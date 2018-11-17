@@ -10,10 +10,7 @@
     la $a0, str
     li $a1, 1000
     syscall 
-    
-    #RightSpaces:
-    
-    
+   
     LeftSpaces:
     #deletes the left spaces if any in user input 
     li $t8, 32 #ascii code for space
