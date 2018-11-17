@@ -54,16 +54,18 @@
     beqz $t5, Conversion 
     beq $t5, $t1, Conversion
     slti $t6, $t5, 48  #if the character is less than 0 than invalid 
-    bne $t6, $zero, err_invalid_input
-    slti $t6, $t5, 58  # if character is less than 9 than valid 
-    bne $t6, $zero, step_char_forward
-    slti $t6, $t5, 65  # if character less than A than invalid 
-    bne $t6, $zero, err_invalid_input
-    slti $t6, $t5, 82  # if character less than R than valid 
-    bne $t6, $zero, step_char_forward
-    slti $t6, $t5, 97  # if character less than a than invalid 
-    bne $t6, $zero, err_invalid_input
-    slti $t6, $t5, 115 # if character less than s than valid  
+    bne $t6, $zero, InvalidInput
+    slti $t6, $t5, 58  # if character is less than 9 then valid 
+    bne $t6, $zero, FindingChar
+    slti $t6, $t5, 65  # if character less than A then invalid 
+    bne $t6, $zero, InvalidInput
+    slti $t6, $t5, 82  # if character less than R then valid 
+    bne $t6, $zero, FindingChar
+    slti $t6, $t5, 97  # if character less than a then invalid 
+    bne $t6, $zero, InvalidInput
+    slti $t6, $t5, 115 # if character less than s then valid  
+    bne $t6, $zero, FindingChar
+    bgt $t5, 114, InvalidInput # if character greater than r then invalid  
 
     
     exit:
