@@ -96,7 +96,12 @@
     
     Base10:
     addi $s4, $s4, -48 #need 10 for base converter so 58-48 =10 and stored into s4
-    j Arrange
+    j Arrange 
+    Base28UP:
+    addi $s4, $s4, -54 #need 28 so subtract 82-54 to get 28 and does upper conversion
+    j Arrange 
+    
+    
     
     exit:
     #tell the system the end of main 
