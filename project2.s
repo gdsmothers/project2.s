@@ -11,7 +11,7 @@
     li $a1, 1000
     syscall 
     
-    RightSpaces:
+    #RightSpaces:
     
     
     LeftSpaces:
@@ -29,7 +29,7 @@
     
     Length:
     addi $t0, $t0, 0 
-    addi $t1, $t1, 20
+    addi $t1, $t1, 10
     add $t4, $t4, $a0 #add can add registers and with addi you have to have a  immediate number
     
     FindLength:
@@ -145,7 +145,6 @@
     li $v0, 1
     move $a0, $t7
     syscall
-
 
     exit:
     #tell the system the end of main 
