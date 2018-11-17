@@ -89,6 +89,11 @@
     beq $s4, $t1, BaseResult #if equal go to BaseResult function
     slti $t6, $s4, 58 
     bne $t6, $zero, Base10 #if not equal go to Base10 function
+    slti $t6, $s4, 82
+    bne $t6, $zero, Base28UP
+    slti $t6, $s4, 115
+    bne $t6, $zero, Base28LO 
+    
     exit:
     #tell the system the end of main 
     li $v0, 10
