@@ -86,7 +86,9 @@
     ConvertBase:
     lb $s4, 0($a0)
     beqz $s4, BaseResult #if s4 equal to 0 go to BaseResult function
-
+    beq $s4, $t1, BaseResult #if equal go to BaseResult function
+    slti $t6, $s4, 58 
+    bne $t6, $zero, Base10 #if not equal go to Base10 function
     exit:
     #tell the system the end of main 
     li $v0, 10
