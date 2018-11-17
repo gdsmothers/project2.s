@@ -83,6 +83,10 @@
     li $s1, 1 #will be stored at 3rd character
     li $s5, 0 #will be stored at 4th character
     
+    ConvertBase:
+    lb $s4, 0($a0)
+    beqz $s4, BaseResult #if s4 equal to 0 go to BaseResult function
+
     exit:
     #tell the system the end of main 
     li $v0, 10
