@@ -143,6 +143,8 @@
     
     BaseResult:
     li $v0, 1
+    move $a0, $t7
+    syscall
 
 
     exit:
