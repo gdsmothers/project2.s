@@ -52,7 +52,10 @@
     ConvertString:
     lb $t5, 0($a0)  
     beqz $t5, Conversion 
-	
+    beq $t5, $t1, Conversion
+    slti $t6, $t5, 48  #if the character is less than 0 than invalid 
+
+    
     exit:
     #tell the system the end of main 
     li $v0, 10
