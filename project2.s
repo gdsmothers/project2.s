@@ -110,7 +110,7 @@
     beq $s0, $s1, Char3
     beq $s0, $s5, Char4
     
-    #converts to base 28 
+    #converts characters to base 28 based on hi or lo 
     Char1: 
     li $s6, 21952
     mult $s4, $s6 
@@ -127,7 +127,9 @@
     addi $s0, $s0, -1
     addi $a0, $a0, 1
     j ConvertBase
-
+    Char3:
+    li $s6, 28
+    mult $s4, $s6
     
     exit:
     #tell the system the end of main 
