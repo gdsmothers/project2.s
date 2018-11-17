@@ -74,9 +74,12 @@
     j ConvertString
 
     Conversion:
-    move $a0, $t4
+    move $a0, $t4 
     addi $t7, $t7, 0
-    
+    add $s0, $s0, $t0
+    addi $s0, $s0, -1	
+    li $s3, 3
+
     exit:
     #tell the system the end of main 
     li $v0, 10
