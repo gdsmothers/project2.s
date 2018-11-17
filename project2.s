@@ -46,9 +46,14 @@
     beqz $t0, EmptyInput 
     slti $t3, $t0, 5 #if string is of appropriate length
     beqz $t3, LongInput
-    move $a0, $t4
-    j ConvertString
- 
+    move $a0, $t4 
+    j ConvertString 
+    
+    ConvertString:
+    lb $t5, 0($a0)  
+    beqz $t5, Conversion 
+	
+    exit:
     #tell the system the end of main 
     li $v0, 10
     syscall 
