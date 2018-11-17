@@ -103,6 +103,9 @@
     Base28LO:
     addi $s4, $s4, -87
     
+    Arrange:
+    beq $s0, $s3, Char1
+    beq $s0, $s2, Char2
     
     exit:
     #tell the system the end of main 
