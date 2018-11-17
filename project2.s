@@ -118,7 +118,10 @@
     add $t7, $t7, $s7
     addi $s0, $s0, -1
     addi $a0, $a0, 1
-    j ConvertBase
+    j ConvertBase 
+    Char2:
+    li $s6, 784
+    mult $s4, $s6
     
     
     exit:
