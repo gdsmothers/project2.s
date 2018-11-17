@@ -73,6 +73,9 @@
     addi $a0, $a0, 1
     j ConvertString
 
+    Conversion:
+    move $a0, $t4
+    addi $t7, $t7, 0
     
     exit:
     #tell the system the end of main 
